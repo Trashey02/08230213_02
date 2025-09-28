@@ -1,7 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education Test</title>
+  <link rel="stylesheet" href="test-edu.css">
+</head>
+<body>
+
 <section class="education-section">
+  <!-- Floating Blobs -->
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
+
   <div class="education-container">
     <h2>📚 My Learning Journey</h2>
-    <p class="edu-intro">A glimpse into my academic path, from my early schooling to higher education.</p>
+    <p class="edu-intro">
+      A glimpse into my academic path, from my early schooling to higher education.
+    </p>
 
     <!-- Carousel Wrapper -->
     <div class="carousel-wrapper">
@@ -9,11 +26,10 @@
       <button class="carousel-btn left">&#10094;</button>
 
       <!-- Cards -->
-      <div class="edu-grid">
-
+      <div class="edu-grid" id="eduGrid">
         <!-- Lower Secondary School (circle) -->
         <div class="edu-card shape-circle" style="background:#FFD700;">
-          <img src="Tsebar-logo.jpg" alt="Tsebar Lower Secondary School Logo">
+          <img src="tlsslogo.jpg" alt="Tsebar Lower Secondary School Logo">
           <div class="edu-info">
             <h3>Lower Secondary</h3>
             <p><strong>Tsebar LSS</strong></p>
@@ -23,7 +39,7 @@
 
         <!-- Middle School (rounded rectangle) -->
         <div class="edu-card shape-rounded-rect" style="background:#7FFFD4;">
-          <img src="Yurung-school-logo.jpg" alt="Yurung Central School Logo">
+          <img src="ycs.jpg" alt="Yurung Central School Logo">
           <div class="edu-info">
             <h3>Middle School</h3>
             <p><strong>Yurung CS</strong></p>
@@ -33,7 +49,7 @@
 
         <!-- Secondary Level (hexagon) -->
         <div class="edu-card shape-hex" style="background:#FF69B4;">
-          <img src="LGA-logo.jpg" alt="Losel Gyatsho Academy Logo">
+          <img src="LGA.jpg" alt="Losel Gyatsho Academy Logo">
           <div class="edu-info">
             <h3>Secondary</h3>
             <p><strong>LGA</strong></p>
@@ -43,7 +59,7 @@
 
         <!-- High School (diamond) -->
         <div class="edu-card shape-diamond" style="background:#87CEEB;">
-          <img src="ugyen-academy-logo.png" alt="Ugyen Academy Logo">
+          <img src="ua.png" alt="Ugyen Academy Logo">
           <div class="edu-info">
             <h3>High School</h3>
             <p><strong>Ugyen Academy</strong></p>
@@ -53,14 +69,13 @@
 
         <!-- College (rounded rectangle with shadow) -->
         <div class="edu-card shape-rounded-rect" style="background:#FFA07A;">
-          <img src="samtse-college-logo.jpg" alt="Samtse College Logo">
+          <img src="scelogo.jpg" alt="Samtse College Logo">
           <div class="edu-info">
             <h3>B.Ed in IT</h3>
             <p><strong>Samtse College</strong></p>
             <p>2023 – Present</p>
           </div>
         </div>
-
       </div>
 
       <!-- Right Arrow -->
@@ -68,3 +83,17 @@
     </div>
   </div>
 </section>
+
+<!-- Carousel Scroll Script -->
+<script>
+const eduGrid = document.getElementById('eduGrid');
+document.querySelector('.carousel-btn.left').addEventListener('click', () => {
+  eduGrid.scrollBy({ left: -240, behavior: 'smooth' });
+});
+document.querySelector('.carousel-btn.right').addEventListener('click', () => {
+  eduGrid.scrollBy({ left: 240, behavior: 'smooth' });
+});
+</script>
+
+</body>
+</html>
